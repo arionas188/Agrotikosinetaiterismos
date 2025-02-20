@@ -1,0 +1,90 @@
+html {
+    font-family: 'Roboto', 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+}
+body {
+    font-family: 'Roboto', 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+    min-height: 100vh; /* Εξασφαλίζει ότι το site έχει τουλάχιστον το ύψος της οθόνης */
+
+}
+
+header {
+    font-family: 'Roboto', 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: transparent; /* Εντελώς διάφανο background */
+    backdrop-filter: blur(10px); /* Θόλωμα */
+    -webkit-backdrop-filter: blur(10px); /* Υποστήριξη Safari */
+    z-index: 1000;
+}
+
+/* Για μεγάλες οθόνες (992px και πάνω) */
+@media (min-width: 992px) {
+    header.desktop {
+        position: fixed;
+        top: 15px; /* Λίγο πιο κοντά στην κορυφή */
+        left: 50%;
+        transform: translateX(-50%); /* Το κεντράρει σωστά */
+        width: 70%;
+        max-width: 1100px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 0.5rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Σωστή στοίχιση logo και menu */
+    }
+}/* Κάνει όλα τα links στη navbar rgb(239,128,25) */
+.navbar-nav > .nav-item > .nav-link {
+    color: rgb(239,128,25);
+}
+
+/* Κάνει τα dropdown items rgb(239,128,25)*/
+.navbar-nav .dropdown-menu .dropdown-item {
+    color: rgb(239,128,25);
+}
+/* Hover effect: Λευκό κείμενο με rgb(134,119,112) */
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+    color: white;
+    background-color: rgb(134,119,112);
+}
+/* Active link */
+.navbar-nav .nav-item .nav-link.active {
+    color:rgb(134,119,112);
+}
+.hero {
+    background-image: url('images/cows_upscaled_4k.jpg');
+    background-position: center;  
+    background-size: cover;                     /* Εξασφαλίζει ότι το background καλύπτει πλήρως το header */
+    background-repeat: no-repeat;               /* Αποτρέπει την επανάληψη της εικόνας */
+    height: 100vh;                              /* Καλύπτει όλο το ύψος της οθόνης */
+    position: relative;  /* Βάζει το Hero ακριβώς κάτω από το Header */
+    padding-top: 250px;  /* Αφήνει χώρο για το header */
+
+}
+.ipirisies {
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgba(134, 119, 112, 0.4); /* 40% διαφάνεια */
+    backdrop-filter: blur(10px); /* Θολώνει το background */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+/* Για μικρές οθόνες */
+@media (max-width: 767px) {
+    .hero {
+        padding-top: 200px;  /* Λιγότερο margin σε μικρές οθόνες */
+    }
+
+    .ipirisies {
+        width: 90%;  /* Πιο στενό box */
+    }
+}
+
+
